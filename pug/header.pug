@@ -1,0 +1,21 @@
+- 
+  var headerNav = [
+    {url: 'home.html', name: 'Home'}, 
+    {url: 'Location.html', name: 'Location'}, 
+    {url: 'Blog.html', name: 'Blog'}, 
+    {url: 'About.html', name: 'About'}, 
+    {url: 'contact.html', name: 'Contact'}
+  ];
+
+mixin navItem(url, name)
+  li.nav-item
+    a.nav-item__link(href=url) #{name}
+
+.header
+  a.logo(href="index.html") Trevland
+  ul.nav-block
+    each i in headerNav
+      +navItem(i.url, i.name)
+  button.btn.header__btn Booking now
+  a.menu-btn
+    span

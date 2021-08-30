@@ -1,0 +1,32 @@
+- 
+  var footerNav = [
+    {url: 'Services.html', name: 'Services'}, 
+    {url: 'About.html', name: 'About'},
+    {url: 'story.html', name: 'Our story'}, 
+    {url: 'Benefits.html', name: 'Benefits'},
+    {url: 'Branding.html', name: 'Branding'},
+    {url: 'Legal.html', name: 'Legal'},
+    {url: 'terms.html', name: 'Terms & Conditions'},
+    {url: 'privecy.html', name: 'Privecy Policy'},
+    {url: 'using.html', name: 'Terms of use'}
+  ];
+
+mixin footerNav(url, name)
+    li.footer-nav-item
+        a.footer-nav-item__link(href=url) #{name}
+
+.footer
+    .section-container
+      .contact-block
+        .footer__logo-holder
+            a.logo(href="index.html") Trevland
+        p Contact us @shovasatkhira88.com
+        +socialList
+      ul.footer-nav
+          each i in footerNav
+              +footerNav (i.url, i.name)
+      .subscribe-block 
+        .subscribe__title SUBSCRIBE NOW
+        form.subscribe-form
+          input(type="email" placeholder="Email")
+          button.btn(href="#") Send

@@ -1,0 +1,21 @@
+.welcome {
+    height: 900px;
+    color: white;
+    background-image: url(../images/cover.png);
+    background-position: center;
+    background-size: cover;
+
+    .section-container {
+        .welcome__title {
+            width: 70%;
+            margin: 2.5em 0 2rem -0.8rem;
+            line-height: 120%;
+        }
+
+        .welcome__text {
+            width: 40%;
+            margin-bottom: 2.3rem;
+            letter-spacing: 1.6;
+        }
+    }
+}

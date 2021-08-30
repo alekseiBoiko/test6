@@ -1,0 +1,12 @@
+-
+    var socialMedia = [
+        {iconPrefix: 'facebook-f', mediaUrl: 'facebook.com'},
+        {iconPrefix: 'instagram', mediaUrl: 'instagram.com'},
+        {iconPrefix: 'twitter', mediaUrl: 'twitter.com'},
+        {iconPrefix: 'linkedin-in', mediaUrl: 'linkedin.com'},
+    ]
+
+mixin socialList(iconPrefix, mediaUrl)
+    li.social-item
+        a.social-link(href=mediaUrl)
+            i(class=`fab fa-${iconPrefix}`)

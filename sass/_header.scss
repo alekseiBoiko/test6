@@ -1,0 +1,27 @@
+.nav-block {
+    @include flex(unset, unset, space-between, start);
+
+    width: 42%;
+    margin-left: 3rem;
+    font-size: 1.125rem;
+
+    .nav-item {
+        .nav-item__link {
+            @include transition(color background-color);
+
+            padding: 0.5rem;
+
+            &:hover {
+                border: 1px solid #C9453B;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    padding: 2.3rem 0;
+
+    @include flex(unset, unset, space-between, center);
+}
