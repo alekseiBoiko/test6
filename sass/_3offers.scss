@@ -1,3 +1,48 @@
 .offers__text {
     padding: 0 29%;
 }
+
+.item__title {
+    padding: 1em 0 1.2rem;
+}
+
+.offer-link {
+    font-family: 'Roboto', sans-serif;
+
+    .offer__img {
+        width: 100%;
+        height: 10.8125rem;
+        border-radius: 10px;
+    }
+
+    .item-information, .item__duration {
+        margin-bottom: 1rem;
+
+        .item__location {
+            margin-right: 3rem;
+            font-size: 1.25rem;
+
+            &::before {
+                font-family:"Font Awesome 5 Free";
+                font-size: 1rem;
+                font-weight: 900;
+                color: red;
+                content: "\f3c5";
+                margin-right: 0.5rem;
+            }
+        }
+
+        .item__star {
+            font-size: 1.125rem;
+
+            &::before {
+                font-family:"Font Awesome 5 Free";
+                font-size: 1rem;
+                font-weight: 900;
+                color: #FFC700;
+                content: "\f005";
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

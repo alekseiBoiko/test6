@@ -18,15 +18,16 @@ mixin footerNav(url, name)
 .footer
     .section-container
       .contact-block
-        .footer__logo-holder
-            a.logo(href="index.html") Trevland
-        p Contact us @shovasatkhira88.com
-        +socialList
+        a.logo(href="index.html") Trevland
+        p.contact__text Contact us @shovasatkhira88.com
+        ul.social-list 
+          each i in socialMedia
+            +socialList(i.iconPrefix, i.mediaUrl, i.iconBackground)
       ul.footer-nav
           each i in footerNav
               +footerNav (i.url, i.name)
       .subscribe-block 
         .subscribe__title SUBSCRIBE NOW
         form.subscribe-form
-          input(type="email" placeholder="Email")
-          button.btn(href="#") Send
+          input.subscribe__input(type="email" placeholder="Email" required)
+          button.btn.footer__btn(href="#") Send

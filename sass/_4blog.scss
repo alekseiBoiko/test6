@@ -1,0 +1,47 @@
+.blog__title-text {
+    padding: 0 24%;
+}
+
+.user-name {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.news-list {
+    width: 100%;
+    height: 47rem;
+
+    @include flex(wrap,column,left,stretch);
+
+    .news-item {
+        width: 48%;
+        height: 31%;
+
+        @include flex(wrap,column,left,start);
+
+        .news__img {
+            height: 12.5625rem;
+            padding-right: 2rem;
+            border-radius: 10px;
+        }
+
+        .news__text {
+            padding-right: 48%;
+        }
+    }
+
+    .news-item_last {
+        width: 48%;
+        height: 100%;
+        margin-right: 15px;
+
+        .news__img_last {
+            width: 100%;
+            height: 53%;
+        }
+
+        .news__text_last {
+            padding: 0 16% 1rem 0;
+        }
+    }
+}

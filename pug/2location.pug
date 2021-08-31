@@ -7,9 +7,10 @@
 
 mixin locationList (itemNumber, itemTitle, itemText)
     li.location-item
-        img.item-img.location-img(src=`images/Location${itemNumber}.jpg` alt=`${imgTitle}`)
-        h3.item-title #{itemTitle}
-        p.text-block.item-text #{itemText}
+        a.location__link
+            img.item-img.location-img(src=`images/Location${itemNumber}.jpg` alt=`${imgTitle}`)
+            h3.item-title #{itemTitle}
+            p.text-block.item-text #{itemText}
 
 section.section_white
     .section-container

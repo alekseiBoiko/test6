@@ -1,12 +1,12 @@
 -
     var socialMedia = [
-        {iconPrefix: 'facebook-f', mediaUrl: 'facebook.com'},
-        {iconPrefix: 'instagram', mediaUrl: 'instagram.com'},
-        {iconPrefix: 'twitter', mediaUrl: 'twitter.com'},
-        {iconPrefix: 'linkedin-in', mediaUrl: 'linkedin.com'},
+        {iconPrefix: 'facebook-f', mediaUrl: 'facebook.com', iconBackground: 'darkslateblue'},
+        {iconPrefix: 'instagram', mediaUrl: 'instagram.com', iconBackground: 'purple'},
+        {iconPrefix: 'twitter', mediaUrl: 'twitter.com', iconBackground: 'skyblue'},
+        {iconPrefix: 'linkedin-in', mediaUrl: 'linkedin.com', iconBackground: 'black'},
     ]
 
-mixin socialList(iconPrefix, mediaUrl)
-    li.social-item
+mixin socialList(iconPrefix, mediaUrl, iconBackground)
+    li(class=`social-item background_colored-${iconBackground}`)
         a.social-link(href=mediaUrl)
             i(class=`fab fa-${iconPrefix}`)

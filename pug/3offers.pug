@@ -9,12 +9,12 @@
 
 mixin offerList (itemNumber, itemTitle, location, days, night, stars, price)
     li.offer-item
-        .offer-item-holder
-            img.img_rounded(src=`images/offer${itemNumber}.png` alt=`${itemTitle}`)
-            h3 #{itemTitle}
-            .item__location #{location}
-            .item__star 
-                b #{stars}
+        a.offer-link
+            img.offer__img(src=`images/offer${itemNumber}.png` alt=`${itemTitle}`)
+            h3.item__title #{itemTitle}
+            .item-information
+                span.item__location #{location}
+                span.item__star #{stars}
             p.item__duration #{days} Day #{night} Nights 
             p.item__price 
                 b $#{price}
@@ -24,7 +24,7 @@ section.section_white
     h2 Special Offers
     p.text-block.title-text.offers__text With the New Year comes a refreshing sense of wanderlust, a longing in our souls to escape to warmer climates, 
     ul.offers-list
-        - for (var x=0; x<3; x++)
+        - for (var x=0; x<2; x++)
             each i in saleItems
                 +offerList(i.itemNumber, i.itemTitle, i.location, i.days, i.night, i.stars, i.price)
 

@@ -1,39 +1,61 @@
 .footer {
-    min-height: 4.375rem;
-    padding-top: 1rem;
-    color: white;
-    background: #202020;
+    max-height: 21.75rem;
+    padding: 7.8rem 0;
+    color: black;
+    background: rgba(38, 148, 153, 0.04);
 
     .section-container {
-        @include flex(unset, unset, space-between, center);
+        @include flex(unset, unset, space-between, flex-start);
 
-        .footer__logo-holder {
-            min-width: 6.25rem;
-            padding-bottom: 0.5rem;
-        }
+        .contact-block {
+            max-width: 23%;
+            height: 100%;
 
-        .copyright {
-            width: 56%;
-            font-size: 0.875rem;
-            font-weight: 300;
-            text-align: left;
+            .contact__text {
+                margin-top: 2.5rem;
+                line-height: 205%;
+                letter-spacing: 1px;
+            }
         }
 
         .footer-nav {
-            margin: 0 -1rem;
-            font-weight: 300;
-            color: #acabab;
+            height: 13.5rem;
+            margin-right: 24.5%;
 
-            @include flex(unset, unset, space-between, center);
+            @include flex(wrap,column,left,flex-start);
 
             .footer-nav-item {
-                margin: 0 0.8rem;
+                width: 10.2rem;
+                height: 20%;
+                margin-right: 3rem;
+                font-weight: 500;
+                line-height: 150%;
+                letter-spacing: 1px;
 
-                @include transition(color);
-
-                &:hover {
-                    color: white;
+                .footer-nav-item__link {
+                    @include transition(text-decoration);
                 }
+
+                &:hover .footer-nav-item__link {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        .subscribe-block {
+            width: 31.5%;
+
+            .subscribe__title {
+                margin-bottom: 3rem;
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+
+            .subscribe-form {
+                @include flex(unset, unset, space-between, flex-start);
+
+                padding-right: 2rem;
             }
         }
     }
