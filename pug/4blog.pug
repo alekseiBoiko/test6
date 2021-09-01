@@ -16,7 +16,7 @@ mixin newsList (itemNumber, itemTitle, itemText, user)
     else    
         li.news-item
             img.news__img(src=`images/Blog${itemNumber}.png` alt=`${itemTitle}`)
-            h4.item-title #{itemTitle}
+            h4.news__title #{itemTitle}
             p.text-block.news__text #{itemText}
             .user-name #{user}
 

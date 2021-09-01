@@ -1,13 +1,13 @@
 - 
     var locationItems = [
-        {itemNumber: '1', itemTitle : 'Istanbul, Turkey', itemText: 'Istanbul is a major city in Turkey that straddles Europe.'},
-        {itemNumber: '2', itemTitle : 'Kuala Lumpur, malaysia',  itemText: 'A 272-step long trek leads you to this century.'},
-        {itemNumber: '3', itemTitle : 'Seoul, South Korea',  itemText: 'South Korea officially the Republic of Korea is a country in East Asia.'}
+        {itemNumber: '1', itemTitle : 'Istanbul, Turkey', itemText: 'Istanbul is a major city in Turkey that straddles Europe.', url: 'istanbul.html'},
+        {itemNumber: '2', itemTitle : 'Kuala Lumpur, malaysia',  itemText: 'A 272-step long trek leads you to this century.', url: 'kuala-lumpur.html'},
+        {itemNumber: '3', itemTitle : 'Seoul, South Korea',  itemText: 'South Korea officially the Republic of Korea is a country in East Asia.', url: 'seoul.html'}
     ]
 
-mixin locationList (itemNumber, itemTitle, itemText)
+mixin locationList (itemNumber, itemTitle, itemText, url)
     li.location-item
-        a.location__link
+        a.location__link(href=`${url}`)
             img.item-img.location-img(src=`images/Location${itemNumber}.jpg` alt=`${imgTitle}`)
             h3.item-title #{itemTitle}
             p.text-block.item-text #{itemText}
@@ -19,5 +19,5 @@ section.section_white
             p.text-block.title-text.location__text For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers— from island hopping in the
             ul.location-list
                 each i in locationItems
-                    +locationList(i.itemNumber, i.itemTitle, i.itemText)
+                    +locationList(i.itemNumber, i.itemTitle, i.itemText, i.url)
         

@@ -30,6 +30,8 @@
         justify-content: center;
         font-size: 1.25rem;
         font-weight: bold;
+        width: 90%;
+        overflow: hide;
 
         button {
             width: 4.6875rem;
@@ -47,14 +49,6 @@
             &.slick-active button {
                 background-color: #C9453B;
             }
-        }
-
-        &::before {
-            content: '<<';
-        }
-
-        &::after {
-            content: '>>';
         }
     }
 

@@ -12,10 +12,13 @@ mixin navItem(url, name)
     a.nav-item__link(href=url) #{name}
 
 .header
-  a.logo(href="index.html") Trevland
-  ul.nav-block
-    each i in headerNav
-      +navItem(i.url, i.name)
-  button.btn.header__btn Booking now
-  a.menu-btn
-    span
+  .section-container
+    .header-holder
+      a.logo(href="index.html") Trevland
+      nav.nav-block
+        ul.nav-list
+          each i in headerNav
+            +navItem(i.url, i.name)
+      a.menu-btn
+        span
+      button.btn.header__btn Booking now

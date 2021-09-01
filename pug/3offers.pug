@@ -9,7 +9,7 @@
 
 mixin offerList (itemNumber, itemTitle, location, days, night, stars, price)
     li.offer-item
-        a.offer-link
+        a.offer-link(href=`${itemNumber}.html`)
             img.offer__img(src=`images/offer${itemNumber}.png` alt=`${itemTitle}`)
             h3.item__title #{itemTitle}
             .item-information

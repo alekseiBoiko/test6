@@ -14,10 +14,10 @@
     @include flex(wrap,column,left,stretch);
 
     .news-item {
-        width: 48%;
+        max-width: 48%;
         height: 31%;
 
-        @include flex(wrap,column,left,start);
+        @include flex(wrap,column,left,flex-start);
 
         .news__img {
             height: 12.5625rem;
@@ -25,8 +25,12 @@
             border-radius: 10px;
         }
 
+        .news__title {
+            margin: 2.5rem 0 1rem;
+        }
+
         .news__text {
-            padding-right: 48%;
+            max-width: 100%;
         }
     }
 
