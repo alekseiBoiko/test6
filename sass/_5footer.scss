@@ -1,55 +1,61 @@
 .footer {
-    max-height: 21.75rem;
+    min-height: 21.75rem;
     padding: 7.8rem 0;
     color: black;
     background: rgba(38, 148, 153, 0.04);
 
-    .section-container {
+    .footer-holder {
         @include flex(unset, unset, space-between, flex-start);
 
-        .contact-block {
-            max-width: 23%;
-            height: 100%;
+        .footer-block_left {
+            width: 68.3%;
 
-            .contact__text {
-                margin-top: 2.5rem;
-                line-height: 205%;
-                letter-spacing: 1px;
-            }
-        }
+            @include flex(unset, unset, space-between, flex-start);
 
-        .footer-nav {
-            height: 13.5rem;
-            margin-right: 24.5%;
+        
+            .contact-block {
+                width: 30%;
+                height: 100%;
 
-            @include flex(wrap,column,left,flex-start);
-
-            .footer-nav-item {
-                width: 10.2rem;
-                height: 20%;
-                margin-right: 3rem;
-                font-weight: 500;
-                line-height: 150%;
-                letter-spacing: 1px;
-
-                .footer-nav-item__link {
-                    @include transition(text-decoration);
-                }
-
-                &:hover .footer-nav-item__link {
-                    text-decoration: underline;
+                .contact__text {
+                    margin-top: 2.5rem;
+                    line-height: 205%;
+                    letter-spacing: 1px;
                 }
             }
 
+            .footer-nav {
+                width: 63%;
+                height: 13.5rem;
+
+                @include flex(wrap,column,left,flex-start);
+
+                .footer-nav-item {
+                    height: 20%;
+                    // margin-left: 1rem;
+                    font-weight: 500;
+                    line-height: 150%;
+                    letter-spacing: 1px;
+
+                    .footer-nav-item__link {
+                        @include transition(box-shadow);
+                    }
+
+                    &:hover .footer-nav-item__link {
+                        box-shadow: 0 2px 0 #C9453B;
+                    }
+                }
+            }
         }
 
         .subscribe-block {
-            width: 31.5%;
+            width: 31.7%;
 
             .subscribe__title {
                 margin-bottom: 3rem;
                 font-size: 1.25rem;
                 font-weight: 500;
+                letter-spacing: 0.06em;
             }
 
             .subscribe-form {

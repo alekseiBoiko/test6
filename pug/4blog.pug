@@ -9,16 +9,20 @@
 mixin newsList (itemNumber, itemTitle, itemText, user)
     if itemNumber=='1'
         li.news-item_last
-            img.news__img_last(src=`images/Blog${itemNumber}.png` alt=`${itemTitle}`)
-            h4.item-title #{itemTitle}
-            p.text-block.news__text_last #{itemText}
-            .user-name #{user}
+            .news-img-holder_last
+                img.news__img(src=`images/Blog${itemNumber}.png` alt=`${itemTitle}`)
+            .news-information-holder      
+                h4.news__title #{itemTitle}
+                p.text-block.news__text_last #{itemText}
+                .user-name_medium #{user}
     else    
         li.news-item
-            img.news__img(src=`images/Blog${itemNumber}.png` alt=`${itemTitle}`)
-            h4.news__title #{itemTitle}
-            p.text-block.news__text #{itemText}
-            .user-name #{user}
+            .news-img-holder
+                img.news__img(src=`images/Blog${itemNumber}.png` alt=`${itemTitle}`)
+            .news-information-holder    
+                h4.news__title #{itemTitle}
+                p.text-block.news__text #{itemText}
+                .user-name #{user}
 
 section.section-white
     .section-container

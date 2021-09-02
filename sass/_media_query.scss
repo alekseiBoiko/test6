@@ -3,16 +3,12 @@
         font-size: 14px;
     }
 
-    // h1 {
-    //     font-size: 3.5rem;
-    // }
-
     .section-container {
         width: 1005px;
     }
 
     .section_white {
-        margin: 3rem 0;
+        margin: 5rem 0;
     }
 
     .welcome {
@@ -35,63 +31,10 @@
 @media only screen and (max-width: 768px) {
     html {
         font-size: 12px;
+    }
 
-        .section-container {
-            width: 650px;
-        }
-
-        .welcome {
-            height: 100vh;
-
-            .section-container {
-                .welcome__title {
-                    width: 90%;
-                    margin: 10% 0 2rem;
-                    line-height: 120%;
-                }
-
-                .welcome__text {
-                    width: 70%;
-                }
-            }
-        }
-
-        .news-list {
-            height: 30rem;
-        
-            @include flex(wrap,column,left,stretch);
-        
-            .news-item {
-                justify-content: left;
-                height: 31%;
-        
-                .news__title {
-                    margin: 1rem 0;
-                }
-
-                .news__img {
-                    height: 90%;
-                    padding-right: 1rem;
-                    border-radius: 10px;
-                }
-        
-                .news__text {
-                    max-width: 100%;
-                    padding-right: 0;
-                }
-            }
-
-            .news-item_last {
-                .news__img_last {
-                    width: 100%;
-                    height: auto;
-                }
-        
-                .news__text_last {
-                    padding: 0 16% 1rem 0;
-                }
-            }
-        }
+    .section-container {
+        width: 650px;
     }
 
     h1 {
@@ -142,8 +85,117 @@
             display: block;
         }
     }
+
+    .welcome {
+        height: 100vh;
+
+        .section-container {
+            .welcome__title {
+                width: 90%;
+                margin: 10% 0 2rem;
+                line-height: 120%;
+            }
+
+            .welcome__text {
+                width: 70%;
+            }
+        }
+    }
+
+    .news__title {
+        margin: 0.5rem 0;
+    }
+
+    .news-list {
+        height: 40rem;
+
+        @include flex(wrap,column,left,stretch);
+
+        .news-item {
+            justify-content: left;
+            height: 31%;
+
+            .news__img {
+                height: 90%;
+            }
+
+            .news__text {
+                max-width: 100%;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .news-item_last {
+            .news__img_last {
+                width: 100%;
+                height: auto;
+            }
+
+            .news__text_last {
+                padding: 0 16% 1rem 0;
+            }
+        }
+    }
 }
 
-// @media only screen and (max-width: 576px) {
-   
-// }
+@media only screen and (max-width: 576px) {
+    .section-container {
+        width: 520px;
+    }
+
+    .blog__title-text {
+        padding: 0 14%;
+    }
+
+    .location__text, .offers__text, .blog__title-text {
+        padding: 0 10%;
+    }
+
+    .news-list {
+        height: auto;
+
+        .news-item_last {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            @include flex(unset,unset,left,flex-start);
+
+            .news-img-holder_last {
+                min-width: 48%;
+                margin-right: 2rem;
+            }
+
+            .news__text_last {
+                padding: 0 1rem 1rem 0;
+            }
+        }
+
+        .news-item {
+            width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .footer .footer-holder {
+        @include flex(wrap, unset, space-between, flex-start);
+
+        .footer-block_left, .subscribe-block {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        .subscribe-block {
+            @include flex(unset, unset, space-between, center);
+
+            .subscribe__title {
+                margin-bottom: 0;
+            }
+
+            .subscribe-form {
+                width: 60%;
+                padding-right: 0;
+            }
+        }
+    }
+}

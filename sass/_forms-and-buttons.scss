@@ -72,8 +72,11 @@ $menuBtnColor_hovered: #C9453B;
 	background-color: #C9453B;
     border: none;
     border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.5;
 
-    @include flex(wrap, unset, center, center);
+    // @include flex(unset, unset, center, center);
     @include transition(background-color);
 
     &:hover {
@@ -97,7 +100,7 @@ $menuBtnColor_hovered: #C9453B;
 }
 
 .subscribe__input {
-	width: 54%;
+	width: 12.1875rem;
 	min-height: 2.75rem;
 	padding: 0.6rem 1rem;
 	border: 1px solid #f5f5f5;

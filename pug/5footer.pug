@@ -16,14 +16,15 @@ mixin footerNav(url, name)
         a.footer-nav-item__link(href=url) #{name}
 
 .footer
-    .section-container
-      .contact-block
-        a.logo(href="index.html") Trevland
-        p.contact__text Contact us @shovasatkhira88.com
-        ul.social-list 
-          each i in socialMedia
-            +socialList(i.iconPrefix, i.mediaUrl, i.iconBackground)
-      ul.footer-nav
+    .section-container.footer-holder
+      .footer-block_left
+        .contact-block
+          a.logo(href="index.html") Trevland
+          p.contact__text Contact us @shovasatkhira88.com
+          ul.social-list 
+            each i in socialMedia
+              +socialList(i.iconPrefix, i.mediaUrl, i.iconBackground)
+        ul.footer-nav
           each i in footerNav
               +footerNav (i.url, i.name)
       .subscribe-block 

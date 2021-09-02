@@ -11,7 +11,6 @@
 
     .offer__img {
         width: 100%;
-        // height: 10.8125rem;
         border-radius: 10px;
     }
 
@@ -23,12 +22,12 @@
             font-size: 1.25rem;
 
             &::before {
+                margin-right: 0.5rem;
                 font-family:"Font Awesome 5 Free";
                 font-size: 1rem;
                 font-weight: 900;
                 color: red;
                 content: "\f3c5";
-                margin-right: 0.5rem;
             }
         }
 
@@ -36,12 +35,12 @@
             font-size: 1.125rem;
 
             &::before {
+                margin-right: 0.5rem;
                 font-family:"Font Awesome 5 Free";
                 font-size: 1rem;
                 font-weight: 900;
                 color: #FFC700;
                 content: "\f005";
-                margin-right: 0.5rem;
             }
         }
     }
