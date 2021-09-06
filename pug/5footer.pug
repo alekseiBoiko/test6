@@ -20,7 +20,8 @@ mixin footerNav(url, name)
       .footer-block_left
         .contact-block
           a.logo(href="index.html") Trevland
-          p.contact__text Contact us @shovasatkhira88.com
+          p.contact__text Contact us 
+            a.mail__link(href="mailto:@shovasatkhira88.com") @shovasatkhira88.com
           ul.social-list 
             each i in socialMedia
               +socialList(i.iconPrefix, i.mediaUrl, i.iconBackground)
@@ -29,6 +30,6 @@ mixin footerNav(url, name)
               +footerNav (i.url, i.name)
       .subscribe-block 
         .subscribe__title SUBSCRIBE NOW
-        form.subscribe-form
+        form.subscribe-form(action="#")
           input.subscribe__input(type="email" placeholder="Email" required)
           button.btn.footer__btn(href="#") Send

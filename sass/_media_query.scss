@@ -41,50 +41,50 @@
         font-size: 3rem;
     }
 
-    .header .header-holder {
-        .nav-block {
-            @include flex(unset,column,center, flex-start);
-            @include transition(top);
+    // .header .header-holder {
+    .nav-block {
+        position: absolute;
+        top: -130%;
+        left: 50%;
+        width: 25%;
+        height: auto;
+        margin-left: 0;
+        opacity: 0;
+        transform: translateX(-50%);
 
-            position: absolute;
-            top: -130%;
-            left: 50%;
-            width: 25%;
-            height: auto;
-            margin-left: 0;
-            opacity: 0;
-            transform: translateX(-50%);
+        @include flex(unset,column,center, flex-start);
+        @include transition(top);
 
-            .nav-list .nav-item {
+        .nav-list .nav-item {
+            width: 100%;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            background-color: $orange;
+            border-radius: none;
+
+            @include transition(color background-color box-shadow);
+
+            &:hover {
+                color: $orange;
+                background-color: white;
+                box-shadow: 0 0 0 3px $orange;
+            }
+
+            .nav-item__link {
                 width: 100%;
-                margin-bottom: 0.5rem;
-                text-align: center;
-                background-color: chocolate;
-                border-radius: none;
-
-                @include transition(color background-color box-shadow);
-
-                &:hover {
-                    color: chocolate;
-                    background-color: white;
-                    box-shadow: 0 0 0 3px chocolate;
-                }
-
-                .nav-item__link {
-                    width: 100%;
-                }
             }
         }
-
-        .nav_active {
-            top: 5.5rem;
-            opacity: 1;
-        }
-
-        .menu-btn {
-            display: block;
-        }
     }
+
+    .nav_active {
+        top: 5.5rem;
+        opacity: 1;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+    // }
 
     .welcome {
         .section-container {
@@ -189,7 +189,6 @@
 
             .news-img-holder_last {
                 min-width: 100%;
-                // margin-right: 2rem;
             }
 
             .news__text_last {
@@ -206,6 +205,7 @@
 
     .footer {
         padding: 2rem 0;
+
         .footer-holder {
             @include flex(wrap, unset, space-between, flex-start);
 
@@ -216,13 +216,13 @@
 
             .footer-block_left {
                 flex-wrap: wrap;
-            
+
                 .contact-block {
                     margin-bottom: 2rem;
 
                     .contact__text {
-                        margin-top: 1rem;
                         max-width: 100%;
+                        margin-top: 1rem;
                     }
                 }
 

@@ -17,6 +17,7 @@
     -webkit-tap-highlight-color: transparent;
 
     .slick-track, .slick-list {
+        max-height: 25rem;
         -webkit-transform: translate3d(0, 0, 0);
         -moz-transform: translate3d(0, 0, 0);
         -ms-transform: translate3d(0, 0, 0);
@@ -28,10 +29,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.25rem;
-        font-weight: bold;
         width: 90%;
         overflow: hide;
+        font-size: 1.25rem;
+        font-weight: bold;
 
         button {
             width: 4.6875rem;
@@ -47,7 +48,7 @@
             list-style: none;
 
             &.slick-active button {
-                background-color: #C9453B;
+                background-color: $red;
             }
         }
     }

@@ -3,7 +3,10 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
+    color: black;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
 }
 
 b {
@@ -16,7 +19,7 @@ a {
 }
 
 h1, h2, h3 {
-    font-family: 'Gelasio', serif;
+    font-family: $gelasio;
 }
 
 h2, h3, h4 {
@@ -45,12 +48,11 @@ h4 {
     margin: 0 auto;
 }
 
-.section_white {
+.information-holder {
     width: 100%;
     margin: 9.3rem 0;
-    color: black;
-    text-align: center;
-    background-color: #fff;
+
+    @include flex(null,column,left,center);
 }
 
 .title-text {
@@ -58,19 +60,6 @@ h4 {
     min-height: 3.625rem;
     margin: 2rem 0 2.8rem;
     text-align: center;
-}
-
-.logo {
-    font-family: 'Ribeye', cursive;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: 1px;
-
-    @include transition(box-shadow);
-
-    &:hover {
-        box-shadow: 0 2px 0 #C9453B;
-    }
 }
 
 .text-block {
@@ -81,4 +70,12 @@ h4 {
 .img_rounded {
     width: 100%;
     border-radius: 10px;
+}
+
+.mail__link {
+    @include transition(box-shadow);
+
+    &:hover {
+        box-shadow: $redUnderline;
+    }
 }

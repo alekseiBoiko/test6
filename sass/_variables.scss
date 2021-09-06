@@ -1,5 +1,27 @@
-$orange: #ff7200;
+$orange: #d2691e;
 $gray: #acabab;
+$red: #C9453B;
+$yellow: #FFC700;
+$lime: #00ff00;
+
+$footerBg: #2694990a;
+
+$roboto: 'Roboto', sans-serif;
+$gelasio: 'Gelasio', serif;
+$awesome: "Font Awesome 5 Free";
+$ribey: 'Ribeye', cursive;
+
+$redUnderline: 0 2px 0 $red;
+$grayShadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+$burgerBtnColor: white;
+$burgerBtnColor_hovered: $lime;
+
+@each $color in darkslateblue, purple, skyblue, black {
+    .background_colored-#{$color} {
+        background-color: $color;
+    }
+}
 
 // usage: @include transition(opacity visibility);
 @mixin transition (
@@ -26,9 +48,9 @@ $gray: #acabab;
 @mixin flex($wrap: unset, $direction: normal, $justify: normal, $align: normal) {
 	display: flex;
 	@include flex-wrap($wrap);
-  @include flex-direction($direction);
-  @include flex-justify($justify);
-  @include flex-align($align);
+  	@include flex-direction($direction);
+  	@include flex-justify($justify);
+  	@include flex-align($align);
 }
 @mixin flex-direction($direction: normal) {
  flex-direction: $direction;

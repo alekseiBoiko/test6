@@ -1,3 +1,11 @@
+$(function(){
+  fixHeader();
+  changeHamburger();
+  initHolderBg('.welcome');
+  drawSlider();
+  }
+);
+
 function fixHeader() {
   let header = $('.header'), //хедер
       headerHeight = header.innerHeight(), // высота хедера
@@ -27,6 +35,28 @@ function changeHamburger() {
       $('.nav-block').toggleClass('nav_active');
     })
 };
+
+
+function initHolderBg(holder) {
+  "use strict";
+  // set image as inline background
+  $(holder).each(function() { 
+      var imgHolder = $(this),
+              img = imgHolder.find('img'),
+              imgSrc = img.attr('src');
+      if(!!imgHolder.length && !!img.length && !!imgSrc) {
+          imgHolder.css({
+              backgroundImage: 'url(' + imgSrc + ')',
+              backgroundSize: 'cover',
+              backgroundPosition: '50% 50%',
+              backgroundRepeat: 'no-repeat',
+              // height: '100%'
+          });
+          img.remove();
+      }
+  });
+}
+
 
 function drawSlider() {
   $('.offers-list').slick({
@@ -63,6 +93,3 @@ function drawSlider() {
   });
 };
 
-fixHeader();
-changeHamburger();
-drawSlider();

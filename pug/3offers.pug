@@ -10,7 +10,7 @@
 mixin offerList (itemNumber, itemTitle, location, days, night, stars, price)
     li.offer-item
         a.offer-link(href=`${itemNumber}.html`)
-            img.offer__img(src=`images/offer${itemNumber}.png` alt=`${itemTitle}`)
+            img.img_rounded(src=`images/offer${itemNumber}.png` alt=`${itemTitle}`)
             h3.item__title #{itemTitle}
             .item-information
                 span.item__location #{location}
@@ -20,7 +20,7 @@ mixin offerList (itemNumber, itemTitle, location, days, night, stars, price)
                 b $#{price}
                 span /person
 
-section.section_white
+section
     h2 Special Offers
     p.text-block.title-text.offers__text With the New Year comes a refreshing sense of wanderlust, a longing in our souls to escape to warmer climates, 
     ul.offers-list

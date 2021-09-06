@@ -1,5 +1,3 @@
-$menuBtnColor: white;
-$menuBtnColor_hovered: #C9453B;
 
 .menu-btn {
     position: relative;
@@ -14,7 +12,7 @@ $menuBtnColor_hovered: #C9453B;
 		margin-top: -5px;
 		width: 100%;
 		height: 5px;
-		background-color: $menuBtnColor;
+		background-color: $burgerBtnColor;
         
         @include transition(background-color);
 
@@ -24,7 +22,7 @@ $menuBtnColor_hovered: #C9453B;
 			margin-top: -5px;
 			width: 100%;
 			height: 5px;
-			background-color: $menuBtnColor;
+			background-color: $burgerBtnColor;
 			content: '';
 			display: block;
 			transition: 0.2s;
@@ -36,7 +34,7 @@ $menuBtnColor_hovered: #C9453B;
 			top: 50%;
 			width: 100%;
 			height: 5px;
-			background-color: $menuBtnColor;
+			background-color: $burgerBtnColor;
 			content: '';
 			display: block;
 			transition: 0.2s;
@@ -46,7 +44,7 @@ $menuBtnColor_hovered: #C9453B;
 
     &:hover {
         span, span::before, span::after {
-            background-color: $menuBtnColor_hovered;
+            background-color: $burgerBtnColor_hovered;
         }
     }
 }
@@ -56,7 +54,8 @@ $menuBtnColor_hovered: #C9453B;
 		height: 0;
 
         &:before {
-            transform: rotate(-45deg);
+			margin-top: 0;
+			transform: rotate(-45deg);
 			transform-origin: center;
 		}
 
@@ -69,18 +68,17 @@ $menuBtnColor_hovered: #C9453B;
 
 .btn {
 	color: white;
-	background-color: #C9453B;
+	background-color: $red;
     border: none;
     border-radius: 5px;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 1.5;
 
-    // @include flex(unset, unset, center, center);
     @include transition(background-color);
 
     &:hover {
-        background-color: darken(#C9453B, 10%);
+        background-color: darken($red, 10%);
     }
 }
 
@@ -107,6 +105,6 @@ $menuBtnColor_hovered: #C9453B;
 	border-radius: 5px;
 
 	&:focus, &:hover {
-        border-color: #C9453B;
+        border-color: $red;
     }
 }

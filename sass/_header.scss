@@ -1,16 +1,28 @@
+.logo {
+    font-family: $ribey;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 1px;
+
+    @include transition(color);
+
+    &:hover {
+        color: $lime;
+    }
+}
+
 .nav-block {
     width: 50%;
     height: 100%;
     margin-left: 3rem;
 
     .nav-list {
-        @include flex(wrap, unset, center, center);
-
         font-size: 1.125rem;
+
+        @include flex(wrap, unset, center, center);
 
         .nav-item {
             min-height: 2rem;
-            padding: 0.2rem 1.45rem;
             border-radius: 5px;
 
             @include transition(box-shadow);
@@ -19,6 +31,7 @@
             .nav-item__link {
                 width: 100%;
                 height: 100%;
+                padding: 0.2rem 1.45rem;
             }
 
             &:hover {
@@ -30,11 +43,10 @@
 
 .header {
     width: 100%;
-    
+
     .header-holder {
         width: 100%;
         min-height: 7rem;
-        // height: 100%;
         padding: 0.5rem 0;
 
         @include flex(unset, unset, space-between, center);
@@ -46,14 +58,9 @@
     top: 0;
     left: 0;
     z-index: 2000;
-    background-color: chocolate;
+    background-color: $orange;
 
     .header-holder {
         min-height: 5rem;
-
-        // .nav-block .nav-list .nav-item {
-        //     background-color: chocolate;
-        //     border-radius: none;
-        // }
     }
 }

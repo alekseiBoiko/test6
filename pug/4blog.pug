@@ -8,12 +8,12 @@
 
 mixin newsList (itemNumber, itemTitle, itemText, user)
     if itemNumber=='1'
-        li.news-item_last
-            .news-img-holder_last
+        li.news-item
+            .news-img-holder_first
                 img.news__img(src=`images/Blog${itemNumber}.png` alt=`${itemTitle}`)
-            .news-information-holder      
+            .news-information-holder_first      
                 h4.news__title #{itemTitle}
-                p.text-block.news__text_last #{itemText}
+                p.text-block.news__text_first #{itemText}
                 .user-name_medium #{user}
     else    
         li.news-item
@@ -24,12 +24,11 @@ mixin newsList (itemNumber, itemTitle, itemText, user)
                 p.text-block.news__text #{itemText}
                 .user-name #{user}
 
-section.section-white
-    .section-container
-        .information__holder
-            h2 From Blog & News
-            p.text-block.title-text.blog__title-text Welcome to Community Conversations, a new interview series featuring Intrepid travellers, creatives and activists in our community.
-            ul.news-list
-                each i in newsItems
-                    +newsList(i.itemNumber, i.itemTitle, i.itemText, i.user)
+section.section-container
+    .information-holder
+        h2 From Blog & News
+        p.text-block.title-text.blog__title-text Welcome to Community Conversations, a new interview series featuring Intrepid travellers, creatives and activists in our community.
+        ul.news-list
+            each i in newsItems
+                +newsList(i.itemNumber, i.itemTitle, i.itemText, i.user)
                     
