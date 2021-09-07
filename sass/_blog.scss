@@ -42,10 +42,10 @@
         max-width: 48%;
         margin-bottom: 1.875rem;
 
-        @include flex(wrap,unset,left,start);
+        @include flex(wrap,normal,left,start);
 
         .news-img-holder {
-            max-width: 48%;
+            max-width: 43%;
             margin-right: 1.7rem;
         }
 

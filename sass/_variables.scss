@@ -4,24 +4,71 @@ $red: #C9453B;
 $yellow: #FFC700;
 $lime: #00ff00;
 
-$footerBg: #2694990a;
+$socialColors: (
+	FB: darkslateblue,
+	insta: purple,
+	twitter: skyblue,
+	linkedin: black
+);
 
-$roboto: 'Roboto', sans-serif;
-$gelasio: 'Gelasio', serif;
-$awesome: "Font Awesome 5 Free";
-$ribey: 'Ribeye', cursive;
+$colors: (
+	body-bg: white,
+	body-color: black,
+	header-bg: none,
+	header-color: white,
+	header-bg_fixed: #d2691e,
+	burger-bg: white,
+	burger-bg_hovered: lime,
+	logo-bg: none,
+	logo-color: inherit,
+	logo-color_hovered: lime,
+	btn-bg: #C9453B,
+	btn-color: white,
+	footer-bg: #2694990a,
+	footer-color: black,
+	social-color: white
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+$fonts: (
+	roboto: ('Roboto', sans-serif),
+	gelasio: ('Gelasio', serif),
+	awesome: ("Font Awesome 5 Free"),
+	ribey: ('Ribeye', cursive)
+);
+
+@function font($key) {
+	@if map-has-key($fonts, $key) {
+	  @return map-get($fonts, $key);
+	}
+	@warn "Unknown `#{$key}` in $fonts.";
+	@return null;
+}
+
+$title-sizes: (
+	h1: 4.0625rem,
+	h2: 2.6875rem,
+	h3: 1.5rem,
+	h4: 1.25rem
+);
+
+@function title-size($key) {
+	@if map-has-key($title-sizes, $key) {
+	  @return map-get($title-sizes, $key);
+	}
+	@warn "Unknown `#{$key}` in $title-sizes";
+	@return null;
+}
 
 $redUnderline: 0 2px 0 $red;
 $grayShadow: 0 0 5px rgba(0, 0, 0, 0.25);
-
-$burgerBtnColor: white;
-$burgerBtnColor_hovered: $lime;
-
-@each $color in darkslateblue, purple, skyblue, black {
-    .background_colored-#{$color} {
-        background-color: $color;
-    }
-}
 
 // usage: @include transition(opacity visibility);
 @mixin transition (
@@ -32,11 +79,9 @@ $burgerBtnColor_hovered: $lime;
 	$value: ();
 
     @each $property in $properties {		
-
         @if length($value) > 0 {
 			$value: append($value, unquote(",") #{$property} $duration $method $delay);
 		}
-
         @else {
 			$value: append($value, #{$property} $duration $method $delay);
 		}

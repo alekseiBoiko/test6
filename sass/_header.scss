@@ -1,13 +1,15 @@
 .logo {
-    font-family: $ribey;
+    font-family: font(ribey);
     font-size: 24px;
     line-height: 150%;
+    color: color(logo-color);
     letter-spacing: 1px;
+    background-color: color(logo-bg);
 
     @include transition(color);
 
     &:hover {
-        color: $lime;
+        color: color(logo-color_hovered);
     }
 }
 
@@ -43,6 +45,8 @@
 
 .header {
     width: 100%;
+    color: color(header-color);
+    background-color: color(header-bg);
 
     .header-holder {
         width: 100%;
@@ -58,7 +62,7 @@
     top: 0;
     left: 0;
     z-index: 2000;
-    background-color: $orange;
+    background-color: color(header-bg_fixed);
 
     .header-holder {
         min-height: 5rem;

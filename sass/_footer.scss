@@ -1,8 +1,8 @@
 .footer {
     min-height: 21.75rem;
     padding: 7.8rem 0;
-    color: black;
-    background: $footerBg;
+    color: color(footer-color);
+    background: color(footer-bg);
 
     .footer-holder {
         @include flex(unset, unset, space-between, flex-start);

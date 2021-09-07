@@ -59,7 +59,7 @@ function initHolderBg(holder) {
 
 
 function drawSlider() {
-  $('.offers-list').slick({
+  $('.offer-list').slick({
       
       slidesToShow: 5,
       infinite: true,

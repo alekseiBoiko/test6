@@ -29,7 +29,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 90%;
         overflow: hide;
         font-size: 1.25rem;
         font-weight: bold;
@@ -128,6 +127,6 @@
     }
 }
 
-.offers-list {
+.offer-list {
     @extend %slick-slider;
 }

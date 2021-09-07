@@ -1,21 +1,26 @@
-.offers__text {
-    padding: 0 29%;
-}
-
 .item__title {
     padding: 1em 0 1.2rem;
 }
 
-.offer-item {
-    margin-right: 80px;
-
-    @include transition(color);
-
-    &:hover {
-        color: $orange;
+.offer {
+    &__text {
+        padding: 0 29%;
     }
 
-    .offer-link {
+    &-list {
+        width: 100%;
+        @include flex(unset, column, center, normal);
+    }
+
+    &-item {
+        margin-right: 80px;
+        @include transition(color);
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &-link {
         width: 100%;
         height: 100%;
 
@@ -28,7 +33,7 @@
 
                 &::before {
                     margin-right: 0.5rem;
-                    font-family: $awesome;
+                    font-family: font(awesome);
                     font-size: 1rem;
                     font-weight: 900;
                     color: $red;
@@ -41,7 +46,7 @@
 
                 &::before {
                     margin-right: 0.5rem;
-                    font-family: $awesome;
+                    font-family: font(awesome);
                     font-size: 1rem;
                     font-weight: 900;
                     color: $yellow;

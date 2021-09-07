@@ -1,10 +1,50 @@
 - 
     var saleItems = [
-        {itemNumber: '1', itemTitle : 'Statue of Liberty.', location: 'New York', days: '4', night: '5', stars: '4.8', price: '450'},
-        {itemNumber: '2', itemTitle : 'The Great Wall ',  location: 'China', days: '7', night: '8', stars: '4.9', price: '850'},
-        {itemNumber: '3', itemTitle : 'Dizin',  location: 'Iran', days: '5', night: '6', stars: '4.6', price: '550'},
-        {itemNumber: '4', itemTitle : 'Sajek Valley',  location: 'Bangladesh', days: '3', night: '4', stars: '4.7', price: '400'},
-        {itemNumber: '5', itemTitle : 'Osaka Castle',  location: 'Japan', days: '4', night: '5', stars: '4.7', price: '700'}
+        {
+            itemNumber: '1', 
+            itemTitle : 'Statue of Liberty.', 
+            location: 'New York', 
+            days: '4', 
+            night: '5', 
+            stars: '4.8', 
+            price: '450'
+        },
+        {
+            itemNumber: '2', 
+            itemTitle : 'The Great Wall ',  
+            location: 'China', 
+            days: '7', 
+            night: '8', 
+            stars: '4.9', 
+            price: '850'
+        },
+        {
+            itemNumber: '3', 
+            itemTitle : 'Dizin',  
+            location: 'Iran', 
+            days: '5', 
+            night: '6', 
+            stars: '4.6', 
+            price: '550'
+        },
+        {
+            itemNumber: '4', 
+            itemTitle : 'Sajek Valley',  
+            location: 'Bangladesh', 
+            days: '3', 
+            night: '4', 
+            stars: '4.7', 
+            price: '400'
+        },
+        {
+            itemNumber: '5', 
+            itemTitle : 'Osaka Castle',  
+            location: 'Japan', 
+            days: '4', 
+            night: '5', 
+            stars: '4.7', 
+            price: '700'
+        }
     ]
 
 mixin offerList (itemNumber, itemTitle, location, days, night, stars, price)
@@ -23,7 +63,7 @@ mixin offerList (itemNumber, itemTitle, location, days, night, stars, price)
 section
     h2 Special Offers
     p.text-block.title-text.offers__text With the New Year comes a refreshing sense of wanderlust, a longing in our souls to escape to warmer climates, 
-    ul.offers-list
+    ul.offer-list
         - for (var x=0; x<2; x++)
             each i in saleItems
                 +offerList(i.itemNumber, i.itemTitle, i.location, i.days, i.night, i.stars, i.price)
