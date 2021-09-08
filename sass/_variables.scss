@@ -17,11 +17,12 @@ $colors: (
 	header-bg: none,
 	header-color: white,
 	header-bg_fixed: #d2691e,
+	header-item-shadow: white,
 	burger-bg: white,
-	burger-bg_hovered: lime,
+	burger-bg_hovered: mix(white, lime, 70%),
 	logo-bg: none,
 	logo-color: inherit,
-	logo-color_hovered: lime,
+	logo-color_hovered: mix(white, lime, 70%),
 	btn-bg: #C9453B,
 	btn-color: white,
 	footer-bg: #2694990a,
@@ -109,3 +110,4 @@ $grayShadow: 0 0 5px rgba(0, 0, 0, 0.25);
 @mixin flex-wrap($wrap: normal) {
 	flex-wrap: $wrap;
 }
+

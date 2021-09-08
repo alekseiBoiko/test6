@@ -31,17 +31,15 @@
 }
 
 .news-list {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 1.875rem;
     width: 100%;
-    height: 47rem;
+    min-height: 47rem;
     margin-top: 3.5rem;
     margin-bottom: -1.875rem;
 
-    @include flex(wrap,column,left,stretch);
-
     .news-item {
-        max-width: 48%;
-        margin-bottom: 1.875rem;
-
         @include flex(wrap,normal,left,start);
 
         .news-img-holder {
@@ -58,9 +56,11 @@
         }
 
         &:first-child {
-            width: 48%;
-            height: 100%;
-            margin-right: 1.875rem;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            grid-row: 1 / 10;
+            min-width: 48%;
+            min-height: 100%;
 
             .news-img-holder_first {
                 width: 100%;

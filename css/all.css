@@ -214,7 +214,7 @@ h4 {
       -webkit-transform: translateY(10px);
       transform: translateY(10px); }
   .menu-btn:hover span, .menu-btn:hover span::before, .menu-btn:hover span::after {
-    background-color: lime; }
+    background-color: #b3ffb3; }
 
 .menu-btn_active span {
   height: 0; }
@@ -353,7 +353,7 @@ h4 {
   -webkit-transition: color 0.5s ease 0s;
   transition: color 0.5s ease 0s; }
   .logo:hover {
-    color: lime; }
+    color: #b3ffb3; }
 
 .nav-block {
   width: 50%;
@@ -403,8 +403,8 @@ h4 {
         height: 100%;
         padding: 0.2rem 1.45rem; }
       .nav-block .nav-list .nav-item:hover {
-        -webkit-box-shadow: 0 0 0 3px #C9453B;
-        box-shadow: 0 0 0 3px #C9453B; }
+        -webkit-box-shadow: 0 0 0 3px white;
+        box-shadow: 0 0 0 3px white; }
 
 .header {
   width: 100%;
@@ -599,28 +599,14 @@ h4 {
     color: #00ff00; }
 
 .news-list {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-gap: 1.875rem;
   width: 100%;
-  height: 47rem;
+  min-height: 47rem;
   margin-top: 3.5rem;
-  margin-bottom: -1.875rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: left;
-  -ms-flex-pack: left;
-  justify-content: left;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch; }
+  margin-bottom: -1.875rem; }
   .news-list .news-item {
-    max-width: 48%;
-    margin-bottom: 1.875rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -644,9 +630,15 @@ h4 {
       .news-list .news-item .news-information-holder .news__text {
         max-width: 100%; }
     .news-list .news-item:first-child {
-      width: 48%;
-      height: 100%;
-      margin-right: 1.875rem; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      grid-row: 1 / 10;
+      min-width: 48%;
+      min-height: 100%; }
       .news-list .news-item:first-child .news-img-holder_first {
         width: 100%;
         height: 55%; }
@@ -903,6 +895,10 @@ h4 {
       height: auto;
       margin-bottom: 2rem; }
     .news-list .news-item:first-child {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
       width: 100%;
       margin-bottom: 2rem; }
       .news-list .news-item:first-child .news-img-holder_first {
